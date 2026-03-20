@@ -1,6 +1,9 @@
 package org.howard.edu.lsp.midterm.strategy;
 
 /**
+ * Name: Doron Reid
+ */
+/**
  * Regular customer pricing strategy.
  */
 public class RegularPrice implements PriceStrategy {

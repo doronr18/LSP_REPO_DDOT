@@ -1,6 +1,9 @@
 package org.howard.edu.lsp.midterm.strategy;
 
 /**
+ * Name: Doron Reid
+ */
+/**
  * Holiday customer pricing strategy (15% discount).
  */
 public class HolidayPrice implements PriceStrategy {

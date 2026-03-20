@@ -1,5 +1,8 @@
 package org.howard.edu.lsp.midterm.strategy;
 
+/**
+ * Name: Doron Reid
+ */
 public class Driver {
     public static void main(String[] args) {
         double basePrice = 100.0;

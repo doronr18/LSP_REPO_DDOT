@@ -1,0 +1,112 @@
+I used AI assistance and no other outside resources was used. Here is the complete conversation:
+
+Me:how should I my thought process be for this question. Help me brainstorm without answering: Part 2 - Proposed Improved Design Using CRC Cards (10 points)
+Redesign the system to improve its object-oriented structure. Express your proposed design using CRC cards (Class–Responsibility–Collaborator). Your CRC cards should identify the major components of the redesigned system and how responsibilities are distributed among them.
+Your answer must be written in a Markdown file named: design.md
+Place the file in the directory:
+org/howard/edu/lsp/midterm/design/doc
+Each CRC card should follow this format:
+Class:
+Responsibilities:
+Collaborators:
+Part 3 - Development Log (5 points)
+Create a Markdown file named development_log_q2.md and place it in:
+org/howard/edu/lsp/midterm/design/doc
+
+This file must document any external resources used while completing this question, including AI tools, internet searches, documentation, lecture notes, or textbooks. For each resource used include what you searched or asked and how the information helped you complete the problem. If no external assistance was used, clearly state that in the file.
+
+
+ChatGPT: Alright, let’s brainstorm a **thought process for approaching this redesign question** without jumping into answers yet. Think of it as a strategy map for your mind before you write anything.
+
+---
+
+## **Step 1 — Understand what CRC cards are for**
+
+* **CRC = Class, Responsibilities, Collaborators**
+* Purpose: Break a system into objects, define what each does (responsibilities), and which objects it talks to (collaborators).
+* Key mindset: Think **“Who does what?”** and **“Who needs to know about whom?”**
+
+---
+
+## **Step 2 — Identify major components of your current system**
+
+Your current system (Task + TaskManager) has two classes:
+
+1. **Task** – Holds info about a single task (id, description, status)
+2. **TaskManager** – Stores a collection of tasks and provides operations (add, find, filter)
+
+**Questions to ask yourself:**
+
+* Are responsibilities well-separated?
+* Does Task know too much about TaskManager or vice versa?
+* Could we split responsibilities for better encapsulation?
+
+---
+
+## **Step 3 — Brainstorm responsibilities**
+
+Think of the responsibilities as **verbs** — things each class should do:
+
+* **Task**
+
+  * Store task info (id, description, status)
+  * Provide status checks / updates
+  * Represent itself as a string
+
+* **TaskManager**
+
+  * Store multiple tasks
+  * Enforce uniqueness of IDs
+  * Find a task by ID
+  * Filter tasks by status
+
+**Opportunities for improvement:**
+
+* Maybe you could have a **StatusValidator** class to handle status rules?
+* Maybe a **TaskRepository** to manage storage instead of TaskManager?
+* Could separate **display/formatting responsibilities** from Task itself (for more OO purity)?
+
+---
+
+## **Step 4 — Identify potential collaborators**
+
+Ask: “Which class needs to talk to which?”
+
+* **TaskManager** collaborates with Task → to add/find/filter tasks
+* **StatusValidator** (if introduced) collaborates with Task → to validate status changes
+* **Task** probably doesn’t collaborate with TaskManager → just stores its own info
+
+---
+
+## **Step 5 — Sketch rough CRC cards (mentally or on paper)**
+
+For each proposed class:
+
+1. **Class Name** → what object it represents
+2. **Responsibilities** → list key verbs/responsibilities
+3. **Collaborators** → list classes it interacts with
+
+---
+
+## **Step 6 — Organize Markdown files**
+
+* **design.md** → contains CRC cards for each class
+* **development_log_q2.md** → document your thought process and resources
+
+  * Even if you only use lecture notes → write them down
+  * If you consult the Java docs or Stack Overflow → note the exact query and what it helped with
+
+---
+
+## **Step 7 — Strategy mindset**
+
+1. Focus on **responsibility separation** → avoid bloated classes
+2. Focus on **collaboration clarity** → who talks to whom and why
+3. Think in **verbs for responsibilities** and **nouns for collaborators**
+4. Keep the Markdown files **organized according to the directory path**
+
+---
+
+If you want, I can help you **brainstorm a few concrete “improved classes” and responsibilities** in a purely conceptual way, so you have a blueprint for the CRC cards without writing actual code yet.
+
+Do you want me to do that next?

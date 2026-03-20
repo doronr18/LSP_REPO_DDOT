@@ -1,6 +1,9 @@
 package org.howard.edu.lsp.midterm.strategy;
 
 /**
+ * Name: Doron Reid
+ */
+/**
  * PriceCalculator uses a PriceStrategy to calculate final price.
  */
 public class PriceCalculator {
